@@ -13,3 +13,12 @@ if (temp === reverse) {
 } else {
     console.log("Not a Palindrome Number");
 }
+
+// Each Word reverse
+let str = "Hello World JavaScript";
+
+let result = str.split(' ')
+    .map(word => word.split('').reverse().join(''))
+    .join(' ');
+
+console.log(result);
