@@ -14,11 +14,20 @@ if (temp === reverse) {
     console.log("Not a Palindrome Number");
 }
 
-//Without using reverse() method
+// Each Word reverse
 let str = "Hello World JavaScript";
 
-let words = str.split(' ');
-let result = [];
+let result = str.split(' ')
+    .map(word => word.split('').reverse().join(''))
+    .join(' ');
+
+console.log(result);
+
+//Without using reverse() method
+let str1 = "Hello World JavaScript";
+
+let words = str1.split(' ');
+let result1 = [];
 
 for (let word of words) {
     let rev = "";
@@ -30,4 +39,4 @@ for (let word of words) {
     result.push(rev);
 }
 
-console.log(result.join(' '));
+console.log(result1.join(' '));
