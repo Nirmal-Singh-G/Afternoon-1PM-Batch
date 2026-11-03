@@ -22,3 +22,21 @@ let result = str.split(' ')
     .join(' ');
 
 console.log(result);
+
+//Without using reverse() method
+let str1 = "Hello World JavaScript";
+
+let words = str1.split(' ');
+let result1 = [];
+
+for (let word of words) {
+    let rev = "";
+
+    for (let i = word.length - 1; i >= 0; i--) {
+        rev = rev + word[i];
+    }
+
+    result.push(rev);
+}
+
+console.log(result1.join(' '));
